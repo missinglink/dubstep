@@ -2,6 +2,7 @@ Dub Step
 --------
 
 A kind of response middleware for expressjs.
+
 Lets you seperate and re-use view specific logic from your controllers.
 
 Example step recipes coming soon.
@@ -41,6 +42,23 @@ Run Tests
 
 ```bash
 npm test
+```
+
+```bash
+
+  dubstep
+    ✓ should be a function that is compatible with connect middleware 
+    middleware
+      ✓ should define a function dub.step() 
+      ✓ should call next() once 
+    steps
+      ✓ should behave like a queue (first in first out) 
+      ✓ should stop when a step neglects to call the next step() 
+      ✓ should have access to req and res from connect 
+
+
+  6 tests complete (3 ms)
+
 ```
 
 License

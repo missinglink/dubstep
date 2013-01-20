@@ -47,7 +47,7 @@ describe 'dubstep', ->
       connect.res.dub.step()
       called.should.eql [ 'first step', 'second step' ]
 
-    it 'should stop steping when they neglect to call step()', ->
+    it 'should stop when a step neglects to call the next step()', ->
 
       called = []
 
