@@ -2,6 +2,7 @@ Dub Step
 --------
 
 A kind of response middleware for expressjs.
+Lets you seperate and re-use view specific logic from your controllers.
 
 Example step recipes coming soon.
 
@@ -23,6 +24,9 @@ A view renderer
     res.send( '<html><title>'+res.title+'</title><body><h1>'+res.title+'</h1></html>' );
   };
 ```
+
+Define the steps in your express controller
+-------------------------------------------
 
 ```javascript
 app.get('/home', function(req, res){
