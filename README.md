@@ -1,14 +1,14 @@
-Dub Step
---------
+# DubStep
 
 A kind of response middleware for expressjs.
 
-Lets you seperate and re-use view specific logic from your controllers.
+Lets you seperate and re-use view specific logic, keeping it out of your controllers.
 
-Example step recipes coming soon.
+Recipes coming soon.
 
-A basic step used to set HTML title
------------------------------------
+## Example Steps
+
+### A basic step used to set HTML title
 
 ```javascript
   var title = function( title, function(req, res, step){
@@ -17,8 +17,7 @@ A basic step used to set HTML title
   });
 ```
 
-A view renderer
------------------------
+### A view renderer
 
 ```javascript
   var html = function(req, res, step){
@@ -26,8 +25,7 @@ A view renderer
   };
 ```
 
-Define the steps in your express controller
--------------------------------------------
+## Define the steps in your express controller
 
 ```javascript
 app.get('/home', function(req, res){
@@ -37,32 +35,27 @@ app.get('/home', function(req, res){
 });
 ```
 
-Run Tests
----------
+## Tests
 
 ```bash
 npm test
 ```
 
 ```bash
+dubstep
+  ✓ should be a function that is compatible with connect middleware 
+  middleware
+    ✓ should define a function dub.step() 
+    ✓ should call next() once 
+  steps
+    ✓ should behave like a queue (first in first out) 
+    ✓ should stop when a step neglects to call the next step() 
+    ✓ should have access to req and res from connect 
 
-  dubstep
-    ✓ should be a function that is compatible with connect middleware 
-    middleware
-      ✓ should define a function dub.step() 
-      ✓ should call next() once 
-    steps
-      ✓ should behave like a queue (first in first out) 
-      ✓ should stop when a step neglects to call the next step() 
-      ✓ should have access to req and res from connect 
-
-
-  6 tests complete (3 ms)
-
+6 tests complete (3 ms)
 ```
 
-License
-------------------------
+## License
 
 Released under the MIT(Poetic) Software license
 
